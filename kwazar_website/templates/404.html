@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<header style="margin-top: 11%;">
+  <section class="container">
+    <h1 class="text-center" style="font-size: 10em; color: white; margin-bottom: -3%;">404</h1>
+    <div class="container">
+      <p class="lead text-center" style="font-size: 2em; color: white;">Strony nie znaleziono</p>
+    </div>
+  </section>
+</header>
+<main>
+    <div class="container pb-3">
+      <p class="lead text-center pb-3" style="color: white;">Szukana przez Ciebie strona nie istnieje<br/><small>(lub została już przez nas sprzątnięta)</small><br></p><p class="page-description text-center" style="font-size: 1.5em;"><a href="{{ url_for('home') }}">Zabierz mnie do strony głównej</a></p>
+    </div>
+</main>
+
+{% endblock content %}

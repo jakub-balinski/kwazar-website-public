@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  {% if not noindex %}<meta name="robots" content="index, follow" />
+  <meta property="og:title" content="{{ title }} | Czyszczenie Bydgoszcz" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://czyszczenie.bydgoszcz.pl{{ url_for(request.endpoint) }}" />
+  <meta property="og:image" content="https://czyszczenie.bydgoszcz.pl/static/img/og_image.png" />
+  <meta property="og:description" content="&quot;Kwazar&quot; – dbamy o komfort i estetykę Twojego otoczenia!" />
+  {% else %}<meta name="robots" content="noindex, follow" />{% endif %}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  {% if home %}<link rel="stylesheet" href="/static/css/full-page-scroll.min.css" />
+  <script src="/static/js/full-page-scroll.min.js"></script>
+  {% elif canonical %}<link rel="canonical" href="{{ canonical }}" />
+  {% elif gallery %}<link rel="stylesheet" href="/static/css/simplelightbox.min.css" />{% endif %}
+  <link rel="stylesheet" href="/static/css/style.min.css?v=1.7" />
+  <title>{{ title }} | Czyszczenie Bydgoszcz</title>
+  {% if meta_desc %}<meta name="description" content="{{ meta_desc }}" />{% endif %}
+  <link rel="manifest" href="/static/manifest.json" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/icon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon/icon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon/icon-32x32.png" />
+  <link rel="mask-icon" href="/static/img/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-config" content="/static/browserconfg.xml" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147169596-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-147169596-1');
+    gtag('config', 'AW-983819083');
+  </script>
+  {% if kontakt %}<script>
+    gtag('event', 'conversion', {'send_to': 'AW-983819083/0bSaCIyR_6kBEMvGj9UD'});
+  </script>{% endif %}
+</head>
+
+<body>
+<!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top border-bottom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{ url_for('home') }}">
+        <img class="logo-kwazar" src="/static/img/logo_kwazar_nav.svg" alt="Logo Kwazar" />
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nawigacja" aria-controls="nawigacja" aria-expanded="false" aria-label="Przełącz nawigację">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="nawigacja">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-item nav-link" href="{{ url_for('o_firmie') }}">O Firmie</a>
+           </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link" href="{{ url_for('aktualnosci') }}">Aktualności</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link" href="{{ url_for('uslugi') }}">Usługi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link" href="{{ url_for('galeria') }}">Galeria</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link" href="{{ url_for('cennik') }}">Cennik</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item nav-link" href="{{ url_for('kontakt') }}">Kontakt</a>
+          </li>
+          <li class="nav-item">
+              <ul class="list-inline social">
+                <li class="list-inline-item">
+                  <a href="https://www.facebook.com/Profesjonalne-Czyszczenie-Kwazar-Bydgoszcz-383715435019482/" class="fb-icon" aria-label="Strona naszej firmy na Facebooku" rel="noopener noreferrer" target="_blank">
+                    <span class="icon-facebook2"></span>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://www.youtube.com/user/ProfesjonalniKwazar" class="yt-icon" aria-label="Kanał YouTube naszej firmy" rel="noopener noreferrer" target="_blank">
+                    <span class="icon-youtube2"></span>
+                  </a>
+                </li>
+              </ul>
+          </li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  {% block content %}{% endblock %}
+
+  {% if not home %}
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-6 text-center text-lg-left">
+          <p class="text-muted small mb-2">&copy; Profesjonalne Czyszczenie "Kwazar" 2019. Wszelkie prawa zastrzeżone.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center text-lg-left"><a class="small" href="{{ url_for('cookies') }}">Polityka plików cookies</a></div>
+      </div>
+    </div>
+  </footer>
+  {% endif %}
+
+  <!-- Optional JavaScript -->
+  <script>
+  //copyright JGA 2013 under MIT License
+  (function(){var monster={set:function(e,t,n,r){var i=new Date,s="",o=typeof t,u="";r=r||"/",n&&(i.setTime(i.getTime()+n*24*60*60*1e3),s="; expires="+i.toGMTString());if(o==="object"&&o!=="undefined"){if(!("JSON"in window))throw"Bummer, your browser doesn't support JSON parsing.";u=JSON.stringify({v:t})}else u=escape(t);document.cookie=e+"="+u+s+"; path="+r},get:function(e){var t=e+"=",n=document.cookie.split(";"),r="",i="",s={};for(var o=0;o<n.length;o++){var u=n[o];while(u.charAt(0)==" ")u=u.substring(1,u.length);if(u.indexOf(t)===0){r=u.substring(t.length,u.length),i=r.substring(0,1);if(i=="{"){s=JSON.parse(r);if("v"in s)return s.v}return r=="undefined"?undefined:unescape(r)}}return null},remove:function(e){this.set(e,"",-1)},increment:function(e,t){var n=this.get(e)||0;this.set(e,parseInt(n,10)+1,t)},decrement:function(e,t){var n=this.get(e)||0;this.set(e,parseInt(n,10)-1,t)}};if(monster.get('cookieinfo')==='true'){return!1}
+  var container=document.createElement('div'),link=document.createElement('a');container.setAttribute('id','cookieinfo');container.setAttribute('class','cookie-alert');container.innerHTML='<p class="cookie-title">Ta strona wykorzystuje pliki cookies</p><p>Jeśli nie wyrażasz na to zgody, ustawienia dotyczące plików cookies możesz zmienić w swojej przeglądarce. Więcej informacji znajdziesz w zakładce: <a href="{{ url_for('cookies') }}" style="color: white;">Polityka plików cookies</a></p>';link.setAttribute('href','#');link.setAttribute('class','cookie-close');link.setAttribute('title','Zamknij');link.innerHTML='&times;';function clickHandler(e){if(e.preventDefault){e.preventDefault()}else{e.returnValue=!1}
+  container.setAttribute('style','opacity: 1');var interval=window.setInterval(function(){container.style.opacity-=0.01;if(container.style.opacity<=0.02){document.body.removeChild(container);window.clearInterval(interval);monster.set('cookieinfo','true',365)}},4)}
+  if(link.addEventListener){link.addEventListener('click',clickHandler)}else{link.attachEvent('onclick',clickHandler)}
+  container.appendChild(link);document.body.appendChild(container);return!0})();function toggleText(btn){if(btn.innerHTML=='Zwiń'){btn.innerHTML='Rozwiń';window.scrollTo({top:0,behavior:'smooth'})}
+  else btn.innerHTML='Zwiń'}
+  </script>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  {% if home %}
+  <script>
+    new fullScroll({
+      mainElement: 'main',
+      displayDots: false,
+      animateTime: 0.7
+    });
+  </script>
+  {% elif aktualnosci %}
+  <script>
+    $(document).ready(function(){$(".news > p").each(function(){$(this).html($(this).html().replace(/(\b(https?):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim,'<a href="$1" rel="noopener noreferrer">$1</a>'))})});
+  </script>
+  {% elif gallery %}
+  <script src="/static/js/simple-lightbox.min.js"></script>
+  <script>var lightbox = $('.gallery a').simpleLightbox();</script>
+  {% endif %}
+</body>
+</html>

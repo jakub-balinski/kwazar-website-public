@@ -1,0 +1,46 @@
+.login-card {
+  width: 80%;
+  margin: auto;
+  padding: 1vh;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.login-card img {
+  width: 50vh;
+  display: block;
+  margin: auto;
+  padding: 0 1em 2em 1em;"
+}
+
+.page-link {
+  border-color: #007ab8;
+  color: #007ab8;
+}
+
+.page-link:hover {
+  color: #007ab8;
+  background-color: #fee6d2;
+}
+
+.page-item.active .page-link {
+  border-color: #007ab8;
+  background-color: #fc8421;
+}
+
+.page-link:focus,.page-link:active {
+   outline: none !important;
+   box-shadow: none;
+}
+
+.pagination-ellipsis {
+  color: white;
+  font-size: 1.5em;
+  padding: 0 1rem;
+  margin-top: 0.5rem;
+}
+
+.new-post {
+  margin: auto;
+  padding: 3vh;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+<header>
+  <section class="container">
+    <h1 class="page-title">{{ header }}</h1>
+  </section>
+</header>
+<main>
+  <div class="container pb-5">
+    <div class="gallery">
+      {% for photo in img_list %}
+        {% if loop.index0 % 2 == 0 %}
+          <div class="row">
+        {% endif %}
+
+            <div class="col-md-6">
+              <div class="container photo">
+                <a href="{{ path }}{{ photo }}"><img src="{{ path }}{{ photo }}" class="img-fluid" alt="{{ photo.split('.', 1)[0].replace('_', ' ') }}" /></a>
+              </div>
+            </div>
+
+        {% if loop.index0 % 2 == 1 or loop.last %}
+          </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+  </div>
+</main>
+{% endblock content %}

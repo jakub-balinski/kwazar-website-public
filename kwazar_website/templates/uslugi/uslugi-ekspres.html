@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+<header class="container">
+  <h1 class="page-title">Usługi Ekspres</h1>
+</header>
+<main>
+  <section class="container d-flex">
+    <div class="page-description">
+      <p class="lead">Wychodząc naprzeciw oczekiwaniom naszych Klientów wprowadzamy nowy rodzaj usług – Usługi Ekspres.<br><br>
+      Idea opiera się na realizacji zadań zgodnych z naszym profilem, ograniczających skutki awarii.<br><br>
+      Najczęstsze zlecenia realizowane przez nas w ramach Usług Ekspres to:</p>
+      <ul class="lead">
+        <li>usuwanie skutków wycieku substancji ropopochodnych na powierzchnie twarde,</li>
+        <li>odpompowywanie wody z pomieszczeń/budynków np. po zalaniu/awarii instalacji,</li>
+        <li>inne sytuacje wymagające szybkiego działania, wchodzące w zakres proponowanych usług.</li>
+      </ul>
+      <br>
+      <p class="lead">W celu ustalenia szczegółów zapraszamy do zakładki <a href="{{ url_for('kontakt') }}">kontakt</a>.</p>
+    </div>
+    <div class="pl-5 d-none d-lg-block">
+        <img src="../static/img/uslugi/express.png" alt="Ekspresowe usługi czyszczenia Bydgoszcz" style="background: #fff; border-radius: 50%; padding: 10px;" />
+    </div>
+  </section>
+</main>
+
+{% endblock content %}

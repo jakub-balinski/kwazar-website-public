@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+{% block content %}
+<main id="main" class="scroll-container">
+  <section class="first-slide" style="background-image: url('/static/img/slide_welcome.jpg'); background-size: cover; background-position: bottom left;">
+    <header class="container welcome">
+      <h1 class="h1 pb-2">Profesjonalne Czyszczenie "Kwazar"</h1><hr>
+      <div class="h2 pt-2">Witamy!</div>
+    </header>
+    <div class="container tiles pt-2">
+      <div class="row">
+        <div class="col-6">
+          <a href="#1" title="Usługi czyszczenia domu" aria-label="Sprawdź nasze usługi czyszczenia dla domu" role="button"><div class="tiles-item">
+            <div class="tiles-icon">
+              <span class="icon-home"></span>
+            </div>
+            <h2>Dla Domu</h2>
+          </div></a>
+        </div>
+        <div class="col-6">
+          <a href="#2" title="Usługi czyszczenia dla Firm" aria-label="Sprawdź nasze usługi dla Firm" role="button"><div class="tiles-item">
+            <div class="tiles-icon">
+              <span class="icon-users"></span>
+            </div>
+            <h2>Dla Firm</h2>
+          </div></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <a href="{{ url_for('o_firmie') }}"><div class="tiles-item">
+            <div class="tiles-icon">
+              <span class="icon-profile"></span>
+            </div>
+            <h2>O Firmie</h2>
+          </div></a>
+        </div>
+        <div class="col-6">
+          <a href="{{ url_for('kontakt') }}"><div class="tiles-item">
+            <div class="tiles-icon">
+              <span class="icon-mobile2"></span>
+            </div>
+            <h2>Kontakt</h2>
+          </div></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="arrow bounce">
+            <a href="#1" title="Następny slajd" aria-label="Przejdź do kolejnego slajdu"><span class="icon-circle-down"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="second-slide">
+    <div class="container-fluid h-100">
+      <div class="row h-100">
+        <div class="col-lg-5 d-none d-lg-block"></div>
+        <div class="col-lg-7 col-sm-12 pb-2 slide-header">
+          <div class="row">
+            <div class="col-12 pb-3 slide-content">
+              <h2 class="lead pt-4">Usługi dla Domu</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 d-none d-sm-block px-4 pt-4">
+              <p class="lead">Na terenie Bydgoszczy i okolic wykonujemy usługi takie jak pranie dywanów, tapicerki meblowej, czyszczenie kostki brukowej, podjazdów, dachów, mycie elewacji i wiele, wiele więcej.<br>Rozgość się i wybierz usługę dla siebie!</p>
+            </div>
+          </div>
+          <div class="row pl-sm-2 pt-2">
+            <div class="col-md-6 pt-2 col-xs-3">
+              <a href="{{ url_for('dom_meble') }}"><h3>Czyszczenie tapicerki</h3></a>
+              <p>Czyszczenie mebli, pranie i impregnacja tapicerki meblowej</p>
+            </div>
+            <div class="col-md-6 pt-2 col-xs-3">
+              <a href="{{ url_for('dom_dywany') }}"><h3>Czyszczenie dywanów</h3></a>
+              <p>Pranie, impregnacja dywanów i wykładzin</p>
+            </div>
+            <div class="col-md-6 pt-2 col-xs-3">
+              <a href="{{ url_for('dom_odory') }}"><h3>Ozonowanie pomieszczeń</h3></a>
+              <p>Usuwanie niechcianych zapachów z materiałów tekstylnych i pomieszczeń, ozonowanie</p>
+            </div>
+            <div class="col-md-6 pt-2 col-xs-3">
+              <a href="{{ url_for('uslugi_dom') }}"><h3>Sprawdź pozostałe usługi</h3></a>
+              <p>To nie wszystko co dla Ciebie przygotowaliśmy!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="third-slide">
+    <div class="container-fluid d-flex h-100">
+      <div class="row">
+        <div class="col-lg-7 col-sm-12 pb-2 slide-header">
+          <div class="row">
+            <div class="col-12 pb-3 slide-content">
+              <h2 class="lead pt-4">Usługi dla Firm</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 d-none d-md-block d-sm-block px-4 pt-4">
+              <p class="lead">Serdecznie zapraszamy do zapoznania się z naszą ofertą dla Firm. Usługi wykonujemy z użyciem maszyn i urządzeń linii profesjonalnej wiodących marek. Posiadamy wieloletnie doświadczenie. Gwarantujemy szybkie terminy realizacji oraz fachowe doradztwo w zakresie czyszczenia i konserwacji powierzchni.</p>
+            </div>
+          </div>
+          <div class="row pl-sm-2 pt-2 pr-sm-4">
+            <div class="col-md-6 pt-2 col-xs-3">
+              <a href="{{ url_for('firma_podlogi') }}"><h3>Czyszczenie posadzek</h3></a>
+              <p>Czyszczenie i konserwacja podłóg i posadzek</p>
+            </div>
+            <div class="col-md-6 pt-2 col-xs-3">
+              <a href="{{ url_for('firma_gres') }}"><h3>Czyszczenie gresu</h3></a>
+              <p>Czyszczenie, konserwacja i impregnacja posadzek gresowych</p>
+            </div>
+            <div class="col-md-6 pt-2 col-xs-3">
+              <a href="{{ url_for('firma_dywany') }}"><h3>Pranie wykładzin</h3></a>
+              <p>Pranie i impregnacja dywanów i wykładzin</p>
+            </div>
+            <div class="col-md-6 pt-2 col-xs-3">
+              <a href="{{ url_for('uslugi_firma') }}"><h3>Sprawdź pozostałe usługi</h3></a>
+              <p>Zapraszamy do zapoznania się z pełną ofertą naszych usług</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block"></div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock content %}

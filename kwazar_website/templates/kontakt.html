@@ -1,0 +1,163 @@
+{% extends "layout.html" %}
+{% block content %}
+<header>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  <div class="container pt-4">
+    {% for category, message in messages %}
+    <div class="alert alert-{{ category }} alert-dismissible fade show py-4">
+      {{ message }}
+      <button type="button" class="close py-4" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% endwith %}
+  <div class="container">
+    <h1 class="page-title">Kontakt</h1>
+  </div>
+</header>
+<main>
+  <div class="container page-description text-center contact-section">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="contact-icon">
+              <span class="jam icon-home3"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p class="lead">Profesjonalne Czyszczenie „Kwazar”
+              <br>Sylwester Baliński</p>
+              <span class="text-small">ul. Tytusa Chałubińskiego 1/16
+              <br>85-794 Bydgoszcz</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="contact-icon">
+                <span class="jam icon-phone"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p class="h3"><a href="tel:668782113" class="text-white">tel. 668 782 113</a><br></p><span class="text-small">od poniedziałku do soboty<br>w godzinach 9:00-18:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="contact-icon">
+                <span class="jam icon-mail2"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p class="h5 e-mail">e-mail:<br><a href="mailto:kwazar@czyszczenie.bydgoszcz.pl" class="text-white">kwazar@czyszczenie.bydgoszcz.pl</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="contact-icon">
+                <span class="jam icon-file-text2"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p class="h4">NIP 8421490603
+                <br>REGON 340826030</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid pb-5">
+
+        <div class="row justify-content-center">
+          <div class="col-lg-7 col-xs-12">
+            <h2 class="h1 text-white p-4 text-center">Formularz kontaktowy</h2>
+            <div class="form p-5">
+              <form method="POST" action="" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                <fieldset class="form-group">
+                  <div class="form-group">
+                    {{ form.title.label(class="form-control-label") }}
+                    {{ form.title(class="form-control form-control-lg", oninvalid="this.setCustomValidity('Pole nie może pozostać puste')", autocomplete="off", oninput="this.setCustomValidity('')") }}
+                  </div>
+                  <div class="form-group">
+                    {{ form.content.label(class="form-control-label") }}
+                    {{ form.content(class="form-control form-control-lg", style="height: 30vh;", oninvalid="this.setCustomValidity('Pole nie może pozostać puste')", autocomplete="off", oninput="this.setCustomValidity('')") }}
+                    <small class="text-muted">
+                      Jeśli preferujesz kontakt telefoniczny, dołącz do wiadomości swój numer telefonu – zadzwonimy
+                    </small>
+                  </div>
+                  <div class="form-group">
+                    {{ form.email.label(class="form-control-label") }}
+                    {% if form.email.errors %}
+                    {{ form.email(class="form-control form-control-lg is-invalid", oninvalid="this.setCustomValidity('Pole nie może pozostać puste')", oninput="this.setCustomValidity('')") }}
+                    <div class="invalid-feedback">
+                      {% for error in form.email.errors %}
+                      <span>{{ error }}</span>
+                      {% endfor %}
+                    </div>
+                    {% else %}
+                    {{ form.email(class="form-control form-control-lg", oninvalid="this.setCustomValidity('Pole nie może pozostać puste')", oninput="this.setCustomValidity('')") }}
+                    {% endif %}
+                    <small class="text-muted">
+                      Użyjemy go <strong>tylko i wyłącznie</strong> do udzielenia odpowiedzi
+                    </small>
+                  </div>
+                  <div class="form-group">
+                    {{ form.picture.label(class="form-control-label") }}
+                    {% if form.picture.errors %}
+                    {{ form.picture(class="form-control-file is-invalid") }}
+                    <div class="invalid-feedback">
+                      {% for error in form.picture.errors %}
+                      <span>{{ error }}</span>
+                      {% endfor %}
+                    </div>
+                    {% else %}
+                    {{ form.picture(class="form-control-file") }}
+                    {% endif %}
+                    <small class="text-muted">
+                      Obsługiwane formaty: .jpg, .jpeg, .png, .webp
+                    </small>
+                  </div>
+                </fieldset>
+                <div class="form-group">
+                  {{ form.recaptcha.label(class="form-control-label") }}
+                  {% if form.recaptcha.errors %}
+                  {{ form.recaptcha }}
+                  <small style="color: #dc3545;">
+                    Pole jest wymagane
+                  </small>
+                  {% else %}
+                  {{ form.recaptcha }}
+                </div>
+                {% endif %}
+                <div class="form-group pt-4" style="text-align: center;">
+                  {{ form.submit(class="btn btn-outline-info", style="line-height: 2em; border-radius: 50px; width: 10em;") }}
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    {% endblock content %}

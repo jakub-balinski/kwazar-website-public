@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+<header class="container">
+  <h1 class="page-title">Usługi</h1>
+  <div class="page-description">
+    <p class="lead">Od szeregu lat <a href="{{ url_for('o_firmie') }}">współpracujemy</a> z zakładami produkcyjnymi, firmami budowlanymi, urzędami, deweloperami, przedszkolami, wspólnotami mieszkaniowymi, zarządcami nieruchomości oraz wieloma innymi podmiotami prawnymi. Świadczymy usługi również Klientom Indywidualnym poszukującym wykonawcy do mniejszych realizacji. Wszystkie te podmioty, Klienci Indywidualni jak i Komercyjni, oczekują wysokiej skuteczności przy zachowaniu rzetelnych, elastycznych relacji biznesowych. Z tej właśnie potrzeby bezpośrednio wypływa filozofia działania, koncentrująca nasze siły na jakości usług oraz przejrzystych, przyjaznych kontaktach z Klientami.<br><br>
+
+    Usługi wykonujemy 24h na dobę od poniedziałku do soboty, <a href="{{ url_for('kontakt') }}">zlecenia telefoniczne</a> przyjmujemy w godzinach 9:00 – 18:00 w każdy dzień, z wyjątkiem niedziel.<br>
+    W przypadku nagłych wypadków, awarii, możemy podjąć doraźne działania mające na celu ograniczenie ich skutków – sprawdź <a href="{{ url_for('uslugi_ekspres') }}">Usługi Ekspres</a>.
+  </div>
+</header>
+<main>
+  <div>
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <a href="{{ url_for('uslugi_dom') }}" class="tile-uslugi">
+            <section class="jumbotron">
+              <h2 class="display-5">Usługi dla Domu</h2>
+              <hr class="my-4">
+              <p class="lead">Sprawdź nasze propozycje dla Klientów Indywidualnych</p>
+            </section>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="{{ url_for('uslugi_firma') }}" class="tile-uslugi">
+            <section class="jumbotron">
+              <h2 class="display-5">Usługi dla Firm</h2>
+              <hr class="my-4">
+              <p class="lead">Sprawdź nasze usługi dla Klientów Biznesowych</p>
+            </section>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock content %}

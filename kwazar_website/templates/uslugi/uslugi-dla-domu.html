@@ -1,0 +1,203 @@
+{% extends "layout.html" %}
+{% block content %}
+<header class="container">
+  <h1 class="page-title">Usługi dla Domu</h1>
+  <div class="page-description">
+    <p class="lead">Od wielu lat rośnie <a href="{{ url_for('o_firmie') }}">grono odbiorców</a> naszych usług wśród prywatnych zleceniodawców. Często zdarza się, że Klient zlecający wykonanie usługi czyszczenia dla firmy, po zapoznaniu się z naszą ofertą i jakością wykonania, dostrzega potrzebę np. doczyszczenia tarasu we własnym domu. Jest nam szalenie miło, że i w tym przypadku tzw. marketing szeptany doskonale spełnia swoją funkcję. „Przecież sąsiadka zamawiała i była zadowolona, sąsiad skorzystał i nie żałuje...”. Dlatego również Państwa zapraszamy do sprawdzenia nas w działaniu.<br><br>
+
+    Wykonujemy usługi utrzymania czystości w domu jak i jego obejściu. Jesteśmy elastyczni – jeśli nie ma możliwości wykonania usługi w wyznaczonych dniach, realizujemy usługi w soboty i niedziele, także dla Klientów Indywidualnych. <a href="{{ url_for('galeria_referencje_certyfikaty') }}">Posiadamy udokumentowane doświadczenie w branży utrzymania czystości</a>.
+    </p>
+  </div>
+</header>
+<main>
+  <div class="container pb-4">
+    <div class="collapse" id="readMore">
+      <div class="page-description">
+        <p class="lead">Nasze usługi wykonujemy nie tylko na terenie miasta Bydgoszczy i okolic. Jeśli zachowana jest opłacalność przedsięwzięcia, wykonamy usługę pod każdym wskazanym adresem. W przeciwnym wypadku przekażemy wykonanie usługi zaprzyjaźnionej firmie w Państwa okolicy, firmie sprawdzonej, godnej naszego polecenia.<br><br>
+
+        Wyczyścimy, wypierzemy Państwa dywany, wykładziny, doczyścimy posadzki, podłogi, usuniemy zabrudzenia z Państwa mebli, elewacji, parkingów. Zadbamy o długoletnią ochronę powierzonych do czyszczenia powierzchni.
+        </p>
+      </div>
+      <section>
+        <h2 class="section-title text-md-right">Jak działamy?</h2>
+        <div class="container">
+          <div class="row tiles">
+            <div class="col-lg-4 col-md-6 tiles-item">
+              <div class="tiles-icon">
+                <span class="icon-phone"></span>
+              </div>
+              <div class="h2 font-weight-bold">1. Kontakt</div>
+              <p>Klient kontaktuje się z nami mailowo lub telefonicznie.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 tiles-item">
+              <div class="tiles-icon">
+                <span class="icon-search"></span>
+              </div>
+              <div class="h2 font-weight-bold">2. Zebranie informacji</div>
+              <p>Analizujemy otrzymane informacje i materiały (np. zdjęcia przesłane mailowo lub MMS). Bardziej skomplikowane zlecenia poprzedzamy pomiarami, próbami oraz rozmową z Klientem na miejscu realizacji.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 tiles-item">
+              <div class="tiles-icon">
+                <span class="icon-file-text2"></span>
+              </div>
+              <div class="h2 font-weight-bold">3. Oferta</div>
+              <p>Informacje na temat procesu czyszczenia, kosztów i dostępnych terminów wykonania przekazujemy Klientowi najczęściej już podczas pierwszej rozmowy. W uzasadnionych przypadkach opracowujemy formalną ofertę kosztorysową.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 tiles-item">
+              <div class="tiles-icon">
+                <span class="icon-truck"></span>
+              </div>
+              <div class="h2 font-weight-bold">4. Realizacja</div>
+              <p>Wykonujemy prace w oparciu o wcześniejsze ustalenia.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 tiles-item">
+              <div class="tiles-icon">
+                <span class="icon-checkmark"></span>
+              </div>
+              <div class="h2 font-weight-bold">5. Odbiór prac</div>
+              <p>Klient weryfikuje zakres i jakość wykonania zadań.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title text-md-left">Zapewniamy</h2>
+        <div class="container page-description">
+          <p class="lead">Rozważając możliwość zamówienia jakiejkolwiek usługi, możesz liczyć na:<br></p>
+          <ul class="lead">
+            <li><span class="font-weight-bold">Długotrwały efekt</span> – Klienci zauważają efekt „szybkiego ponownego brudzenia się” najczęściej na czyszczonych meblach tapicerowanych, powodem jest tzw. oszczędność pozorna – firma lub „osoba dorabiająca do pensji”, chcąc zwiększyć swoją konkurencyjność cenową, pomija ważny etap procesu prania tapicerki meblowej, pozostawiając na jej powierzchni środki powierzchniowo czynne. Powstaje „lepik” na brud, a efekt czyszczenia jest krótkotrwały. Oczywiście są dostępne środki czyszczące np. krystalizujące, mogące bezpiecznie pozostać na powierzchni – są one jednak znacznie droższe. Do usuwania niekorzystnej chemii przywiązujemy szczególną wagę.<br><br></li>
+
+            <li><span class="font-weight-bold">Błyskawiczny termin</span> – dopasowujemy się do wymagań Klientów również terminami i godzinami realizacji.
+              Jeśli tego oczekuje Klient, wykonujemy <a href="{{ url_for('uslugi_ekspres') }}">Usługi Ekspres</a> – działania z pominięciem kolejki prac.<br><br></li>
+
+              <li><span class="font-weight-bold">Dogodną formę płatności</span> – wystawiamy FV, także o wydłużonym terminie płatności, płatności w ratach, z możliwością płatności na konto bankowe. Ufamy naszym Klientom, dzięki czemu oni mają zaufanie do nas.<br><br></li>
+
+              <li><span class="font-weight-bold">Szybkie schnięcie</span> – w procesie doboru metody, technologii usuwania zabrudzeń, bierzemy pod uwagę potrzeby, sugestie Klienta. Jeśli to możliwe maksymalnie skracamy okres wyłączenia powierzchni z użytkowania, ograniczeniem są wymogi właściwie przeprowadzonego procesu oraz technologiczne. Na życzenie Klienta stosujemy urządzenia przyspieszające proces schnięcia: wysoko wydajne dmuchawy, pochłaniacze wilgoci, szczególnie przydatne po czyszczeniu ekstrakcyjnym dywanów czy nakładaniu powłok zabezpieczających na posadzkach twardych.<br><br></li>
+
+              <li><span class="font-weight-bold">Przyjazne preparaty</span> – pracę, szczególnie w domu Klienta, organizujemy w sposób gwarantujący bezpieczeństwo, stosujemy tylko certyfikowane środki czystości firm Kärcher, Tenzi, Prochem, Buzil w tym także środki biodegradowalne. Powierzchnie wyczyszczone pozostawiamy bezpieczne dla domowników.<br><br></li>
+
+              <li><span class="font-weight-bold">Bezpieczeństwo prac</span> – najpierw zabezpieczamy mienie Zlecającego. Wieloletnie doświadczenie pozwala nam przeprowadzać usługi w jak najmniej uciążliwy dla Klienta sposób, ze szczególną dbałością o bezpieczeństwo i organizację prac. Posiadamy ubezpieczenie OC działające w przypadku niezamierzonego spowodowania zniszczeń przez naszą Firmę.<br><br></li>
+
+              <li><span class="font-weight-bold">Atrakcyjną cenę</span> – stawiamy na zadowolenie Klienta, to dla nas priorytet. Korzystamy z poleceń, nie dopasowujemy cen do wyobrażeń Klienta, ale do rzeczywistych potrzeb materiałowych i pracochłonności prac. Optymalizujemy cenę według kryterium potrzeb i sugestii Klientów, usługę wykonujemy zawsze na wysokim poziomie co daje gwarancję zachowania właściwej kondycji i estetyki czyszczonych powierzchni na długi czas. Staramy się przekonywać, że oszczędność bywa pozorna. Przy średnich i dużych zleceniach oraz dla stałych Klientów oferujemy korzystne rabaty, płatności na raty.<br><br></li>
+
+              <li><span class="font-weight-bold">Gwarancję</span> – na nasze usługi udzielamy gwarancji, także Klientom Indywidualnym. Jeśli zaakceptowałeś jakość usługi, zapłaciłeś za nią lecz np. w dniu następnym zauważyłeś niedociągnięcia, śmiało zadzwoń – dokonamy poprawek bez zbędnej zwłoki.<br><br></li>
+
+              <li><span class="font-weight-bold">Uczciwość, bezpieczeństwo majątku</span> – na życzenie Klienta legitymujemy się zaświadczeniem o niekaralności. Pracujemy w niewielkim, zaufanym gronie ludzi nacechowanych uczciwością i przyjaznym sposobem bycia. Rekomendacją niech będzie informacja, że cyklicznie wykonujemy usługi utrzymania czystości dla osób starszych, samotnych. Wielu Klientów Indywidualnych, właścicieli firm, na czas wykonywania usługi udostępnia nam klucze do lokali.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div class="btn-wrapper">
+        <button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#readMore" aria-expanded="false" aria-controls="readMore" onclick="toggleText(this);">
+         Rozwiń
+       </button>
+     </div>
+     <hr>
+   </div>
+   <section>
+    <div class="container py-3">
+      <div class="row">
+        <div class="col-md-6">
+          <a href="{{ url_for('uslugi_ekspres') }}" class="tile-uslugi ekspres">
+            <div class="jumbotron">
+              <h3 class="display-5">Usługi Ekspres</h3>
+              <hr class="my-4">
+              <p class="lead">Działania z pominięciem kolejki prac mające na celu ograniczenie skutków awarii</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="{{ url_for('dom_dachy') }}" class="tile-uslugi">
+            <div class="jumbotron">
+              <h3 class="display-5">Mycie dachów</h3>
+              <hr class="my-4">
+              <p class="lead">Czyszczenie, konserwacja i malowanie dachów</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <a href="{{ url_for('dom_kostka') }}" class="tile-uslugi">
+            <div class="jumbotron">
+              <h3 class="display-5">Mycie kostki brukowej</h3>
+              <hr class="my-4">
+              <p class="lead">Czyszczenie, impregnacja i malowanie kostki brukowej</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="{{ url_for('dom_podlogi') }}" class="tile-uslugi">
+            <div class="jumbotron">
+              <h3 class="display-5">Mycie podłóg</h3>
+              <hr class="my-4">
+              <p class="lead">Czyszczenie, konserwacja podłóg i posadzek</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <a href="{{ url_for('dom_elewacje') }}" class="tile-uslugi">
+            <div class="jumbotron">
+              <h3 class="display-5">Mycie elewacji</h3>
+              <hr class="my-4">
+              <p class="lead">Czyszczenie, konserwacja elewacji i fasad</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="{{ url_for('dom_szklo') }}" class="tile-uslugi">
+            <div class="jumbotron">
+              <h3 class="display-5">Mycie powierzchni szklanych</h3>
+              <hr class="my-4">
+              <p class="lead">Czyszczenie, mycie powierzchni szklanych, paneli fotowoltaicznych</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <a href="{{ url_for('dom_dywany') }}" class="tile-uslugi">
+            <div class="jumbotron">
+              <h3 class="display-5">Czyszczenie dywanów</h3>
+              <hr class="my-4">
+              <p class="lead">Pranie, impregnacja dywanów i wykładzin</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="{{ url_for('dom_meble') }}" class="tile-uslugi">
+            <div class="jumbotron">
+              <h3 class="display-5">Pranie mebli</h3>
+              <hr class="my-4">
+              <p class="lead">Czyszczenie mebli, pranie i impregnacja tapicerki meblowej</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <a href="{{ url_for('dom_meble_skorzane') }}" class="tile-uslugi">
+            <div class="jumbotron">
+              <h3 class="display-5">Czyszczenie tapicerki skórzanej</h3>
+              <hr class="my-4">
+              <p class="lead">Czyszczenie i konserwacja tapicerki skórzanej</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="{{ url_for('dom_odory') }}" class="tile-uslugi">
+            <div class="jumbotron">
+              <h3 class="display-5">Ozonowanie</h3>
+              <hr class="my-4">
+              <p class="lead">Usuwanie niechcianych zapachów z materiałów tekstylnych i pomieszczeń, ozonowanie</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock content %}

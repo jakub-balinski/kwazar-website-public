@@ -1,0 +1,150 @@
+{% extends "layout.html" %}
+{% block content %}
+<header class="container">
+  <h1 class="page-title">Cennik</h1>
+  <div class="page-description">
+    <p class="lead">Mając na uwadze indywidualny charakter każdego zlecenia, nie zamieszczamy cennika w formie tradycyjnej. Jednocześnie pragniemy Państwa zachęcić do korzystania z <a href="{{ url_for('kontakt') }}">kwestionariusza kontaktowego</a>, z zamieszczeniem numeru telefonu, na który życzą sobie Państwo otrzymać więcej informacji. Chętnie odpowiemy na wszystkie pytania i wątpliwości.</p>
+  </div>
+</header>
+<main>
+  <div class="container" id="accordion">
+    <div id="cennikDom">
+      <h2 class="h3 mb-4">
+        <a class="collapsed" data-toggle="collapse" href="#dom" role="button" aria-expanded="false" aria-controls="dom">
+          Cennik Usług dla Domu &#xbb;
+        </a>
+      </h2>
+    </div>
+    <div id="dom" class="collapse" aria-labelledby="cennikDom" data-parent="#accordion">
+      <section class="page-description">
+        <p class="lead">Poniżej zamieszczamy przykłady orientacyjnych cen <a href="{{ url_for('uslugi_dom') }}">usług dla Domu</a>, tak by mieli Państwo punkt odniesienia.</p>
+        <h3 class="h4 py-4">Głębokie czyszczenie ekstrakcyjne powierzchni średnio zabrudzonych, wypłukanie chemii</h3>
+        <table class="table text-white table-striped">
+          <tbody>
+            <tr>
+              <th scope="row">fotel typu Finka</th>
+              <td>od 35zł</td>
+            </tr>
+            <tr>
+              <th scope="row">krzesło tapicerowane</th>
+              <td>od 15zł</td>
+            </tr>
+            <tr>
+              <th scope="row">materac 90 jednostronnie</th>
+              <td>od 40zł</td>
+            </tr>
+            <tr>
+              <th scope="row">narożnik</th>
+              <td>od 150zł</td>
+            </tr>
+            <tr>
+              <th scope="row">kanapa typu wersalka bez podłokietników</th>
+              <td>od 100zł</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="pb-4">
+        <h3 class="text-white h4 pb-4">Impregnacja przeciw zabrudzeniom powierzchni tekstylnych</h3>
+        <table class="table text-white table-striped">
+          <tbody>
+            <tr>
+              <th scope="row">pufa średniej wielkości</th>
+              <td>od 20zł</td>
+            </tr>
+            <tr>
+              <th scope="row">siedzisko sofa II</th>
+              <td>od 50zł</td>
+            </tr>
+            <tr>
+              <th scope="row">podłokietniki wersalki</th>
+              <td>od 20zł</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="pb-4">
+        <h3 class="text-white h4 pb-4">Neutralizacja odorów, uryna</h3>
+        <table class="table text-white table-striped">
+          <tbody>
+            <tr>
+              <th scope="row">powierzchnia tekstylna mebla tapicerowanego</th>
+              <td>od 30zł/m&sup2;</td>
+            </tr>
+            <tr>
+              <th scope="row">powierzchnia dywanu, wykładziny</th>
+              <td>od 30zł/m&sup2;</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="pb-3">
+        <h3 class="text-white h4 pb-4">Czyszczenie ekstrakcyjne dywanów, wykładzin w domu Klienta</h3>
+        <table class="table text-white table-striped">
+          <tbody>
+            <tr>
+              <th scope="row">dywan wełniany, niskie runo</th>
+              <td>od 14zł/m&sup2;</td>
+            </tr>
+            <tr>
+              <th scope="row">dywan typu shaggy, wysokie runo</th>
+              <td>od 17zł/m&sup2;</td>
+            </tr>
+            <tr>
+              <th scope="row">wykładzina, niskie runo</th>
+              <td>od 10zł/m&sup2;</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+    <div id="cennikFirma">
+      <h2 class="h3 mb-4">
+        <a class="collapsed" data-toggle="collapse" href="#firma" role="button" aria-expanded="false" aria-controls="firma">
+          Cennik Usług dla Firm &#xbb;
+        </a>
+      </h2>
+    </div>
+    <div id="firma" class="collapse" aria-labelledby="cennikFirma" data-parent="#accordion">
+      <div class="page-description">
+        <p class="lead">Do każdego zlecenia podchodzimy indywidualnie. Kosztorys prac specjalistycznych wykonywany jest najczęściej na podstawie:</p>
+        <ul class="text-white lead">
+          <li>oględzin obiektu, rozmowy z zainteresowanym zleceniodawcą,</li>
+          <li>wyników wykonanych prób na powierzchniach przeznaczonych do czyszczenia lub zabezpieczania,</li>
+          <li>przesłanej dokumentacji, specyfikacji.</li>
+        </ul>
+        <p class="lead">
+        Proponujemy również przygotowanie szybkiej, bezpłatnej oferty poglądowej. Wykonujemy ją na podstawie informacji, zapytania przesłanego do nas mailowo bądź poprzez formularz kontaktowy. Krótkie informacje niezbędne nam do właściwego przygotowania oferty:</p>
+        <ul class="lead">
+          <li>miejsce realizacji usługi,</li>
+          <li>zakres zlecanych prac,</li>
+          <li>krótki opis powierzchni, obiektów przeznaczonych do czyszczenia, zabezpieczania,</li>
+          <li>inne specyficzne wymagania zleceniodawcy np. ograniczenia czasowe, praca w etapach itp.</li>
+        </ul>
+        <p class="lead">
+        <span class="font-weight-bold">Ważne:</span> przy wycenie poszczególnych prac opieramy się na obiektywnych kryteriach takich jak:</p>
+        <ul class="lead">
+          <li>miejsce realizacji usługi,</li>
+          <li>stopień zabrudzenia powierzchni,</li>
+          <li>wymagane usługi pomocnicze np. wykorzystanie podnośnika koszowego,</li>
+          <li>inne specyficzne wymagania zleceniodawcy np. praca w etapach, praca w nocy itp.</li>
+        </ul>
+        <p class="lead">
+        <br>Więcej informacji na temat cen usług z łatwością uzyskają Państwo telefonicznie <a href="tel:668782113" class="text-white">tel. 668 782 113</a>, lub poprzez <a href="{{url_for('kontakt') }}">formularz kontaktowy</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <section class="page-description">
+      <h3 class="section-title text-md-right">Dodatkowe informacje</h3>
+      <ul class="lead">
+        <li>na terenie miasta Bydgoszczy dojazd do Klienta jest bezpłatny,</li>
+        <li>cenę dojazdu poza miasto ustalamy indywidualnie z Klientem, przy znacznych zleceniach – dojazd bezpłatny,</li>
+        <li>minimalna kwota realizacji to 110 zł,</li>
+        <li>jesteśmy płatnikiem VAT.</li>
+      </ul>
+    </section>
+  </div>
+</main>
+{% endblock content %}

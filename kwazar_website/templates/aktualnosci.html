@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+<header class="container">
+  <h1 class="page-title">Aktualności</h1>
+</header>
+<main>
+  <div class="container px-3 page-description">
+      {% for post in posts.items %}
+      <section class="news pb-3">
+        <h2 class="pt-2">{{ post.title }}</h2>
+        <small>{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+        <p class="post-content pb-3">
+          {{ post.content }}
+        </p>
+      <hr>
+      </section>
+      {% endfor %}
+  </div>
+
+ <div class="container mb-5">
+    <nav aria-label="Nawigacja po stronach">
+      <ul class="pagination justify-content-center">
+        {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+          {% if page_num %}
+            {% if posts.page == page_num %}
+              <li class="page-item active"><a class="page-link" href="{{ url_for('aktualnosci', page=page_num) }}"><span class="p-2">{{ page_num }}</span></a></li>
+            {% else %}
+              <li class="page-item"><a class="page-link" href="{{ url_for('aktualnosci', page=page_num) }}"><span class="p-2">{{ page_num }}</span></a></li>
+            {% endif %}
+          {% else %}
+            <span class="pagination-ellipsis">...</span>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</main>
+{% endblock content %}

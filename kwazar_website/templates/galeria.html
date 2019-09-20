@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+{% block content %}
+<header class="container">
+  <h1 class="page-title">Galeria</h1>
+</header>
+<main>
+  <section class="container mt-4 pb-5">
+    <div class="row">
+      <div class="col-md-6">
+        <a href="{{ url_for('galeria_kostka_brukowa') }}" role="button">
+          <div class="card gallery-card">
+            <img src="/static/img/galeria/czyszczenie_kostki_brukowej.jpg" class="card-img-top" alt="Czyszczenie kostki brukowej">
+            <div class="card-body">
+              <h2 class="h4">Czyszczenie kostki brukowej</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6">
+        <a href="{{ url_for('galeria_dachy_elewacje') }}" role="button">
+          <div class="card gallery-card">
+            <img src="/static/img/galeria/czyszczenie_dachow_elewacji.jpg" class="card-img-top" alt="Czyszczenie dachów i elewacji">
+            <div class="card-body">
+              <h2 class="h4">Mycie dachów i elewacji</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <a href="{{ url_for('galeria_podlogi_posadzki') }}" role="button">
+          <div class="card gallery-card">
+            <img src="/static/img/galeria/czyszczenie_podlog_posadzek.jpg" class="card-img-top" alt="Czyszczenie podłóg i posadzek">
+            <div class="card-body">
+              <h2 class="h4">Czyszczenie podłóg i posadzek</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6">
+        <a href="{{ url_for('galeria_powierzchnie_szklane') }}" role="button">
+          <div class="card gallery-card">
+            <img src="/static/img/galeria/czyszczenie_powierzchni_szklanych.jpg" class="card-img-top" alt="Czyszczenie powierzchni szklanych">
+            <div class="card-body">
+              <h2 class="h4">Mycie powierzchni szklanych</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <a href="{{ url_for('galeria_referencje_certyfikaty') }}" role="button">
+          <div class="card gallery-card">
+            <img src="/static/img/galeria/referencje_certyfikaty.jpg" class="card-img-top" alt="Referencje i certyfikaty">
+            <div class="card-body">
+              <h2 class="h4">Referencje i certyfikaty</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6">
+        <a href="{{ url_for('galeria_inne') }}" role="button">
+          <div class="card gallery-card">
+            <img src="/static/img/galeria/inne.jpg" class="card-img-top" alt="Czyszczenie innych powierzchni">
+            <div class="card-body">
+              <h2 class="h4">Inne usługi</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock content %}

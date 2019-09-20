@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+{% block content %}
+<header class="container">
+  <h1 class="page-title">Ozonowanie</h1>
+  <div class="page-description">
+    <div class="text-md-right top-btn px-3">
+      <span class="btn-wrapper">
+        <button onclick="location.href='{{ url_for('uslugi_firma')}}'" class="btn btn-outline-info px-5" type="button">
+          Usługi dla Firm
+        </button>
+      </span>
+    </div>
+    <p class="lead">Podczas realizacji usług czyszczenia, prania wykładzin, dywanów, mebli tapicerowanych często spotykamy się z problemem odorów. W takim przypadku nie zawsze podstawowe czyszczenie wystarcza dla uzyskania pożądanego efektu. Dym papierosowy, mocz, zapachy odzwierzęce i wiele innych substancji może powodować kłopotliwy, trudny do usunięcia zapach. Z tego powodu wyodrębniliśmy takie działania jako odrębną usługę.</p>
+  </div>
+</header>
+<main>
+  <section class="container">
+    <h2 class="section-title text-md-right">Co czyścimy?</h2>
+    <div class="page-description">
+      <p class="lead">Najczęściej neutralizujemy odory w obrębie materiału tekstylnego czy to dywanu czy mebla. Jednak w niektórych przypadkach osiągnięcie właściwego efektu wymaga neutralizacji całego pomieszczenia.
+      </p>
+    </div>
+  </section>
+
+  <div class="container nasza-rada">
+    <div class="d-flex flex-row-reverse">
+      <div class="col-lg-9">
+        <div class="alert alert-info">
+          <div class="h3 alert-heading">Nasza rada</div>
+          <hr>
+          <p>W przypadku zabrudzeń zapachowych należy uwzględnić czynnik czasu. Substancje, takie jak mocz, nie tylko brzydko pachną ale i zawierają substancje, które w zależności od rodzaju materiału, mogą trwale uszkodzić tekstylia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="container">
+    <h2 class="section-title">Jak czyścimy?</h2>
+    <div class="page-description">
+      <p class="lead">Istnieje kilka metod działania i ogromna gama preparatów wspomagających w tym zakresie.
+      Do najczęściej stosowanych przez nas sposobów należy neutralizacja poprzez odpowiednio dobrane preparaty, głębokie czyszczenie ekstrakcyjne z użyciem dodatków zadaniowych do roztworów czyszczących lub ozonowanie. Preparaty mają za zadanie chemicznie związać niepożądaną substancję np. neutralizując amoniak w moczu; ozonowanie natomiast, poza zdolnością do usuwania zapachów poprzez utlenianie, działa silnie bakteriobójczo. Niezależnie od dobranych i zastosowanych technik i środków, celem działania pozostaje trwałe usunięcie przyczyny, czynnika wywołującego brzydki zapach.
+      </p>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2 class="section-title text-md-right">Park maszyn i urządzeń</h2>
+    <div class="page-description">
+      <ul class="lead">
+        <li>ekstraktor,</li>
+        <li>ozonator.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="container nasza-rada">
+    <div class="d-flex flex-row-reverse">
+      <div class="col-lg-9">
+        <div class="alert alert-info">
+          <div class="h3 alert-heading">Nasza rada</div>
+          <hr>
+          <p>W warunkach domowych podstawowym zadaniem jest szybkie i efektywne odsączenie substancji powodującej odór. Należy unikać działań prowadzących do wnikania substancji w głąb, taki błąd może znacząco utrudnić skuteczną profesjonalną neutralizację.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="container">
+    <h2 class="section-title">Czego potrzebujemy?</h2>
+    <div class="page-description">
+      <p class="lead">Ze strony Klienta oczekujemy:</p>
+      <ul class="lead">
+        <li>współpracy w zakresie określenia jego potrzeb i wymagań,</li>
+        <li>umożliwienia wykonania prób,</li>
+        <li>usunięcia przedmiotów wrażliwych ze strefy wykonywania zadania,</li>
+        <li>usunięcia przedmiotów utrudniających dostęp do powierzchni czyszczonej lub zlecenie takich prac,</li>
+        <li>czasowego wyłączenia z użytkowania powierzchni czyszczonej,</li>
+        <li>zapewnienia optymalnych warunków w okresie schnięcia powierzchni tj. temperatury, cyrkulacji powietrza,</li>
+        <li>umożliwienia parkowania na czas prac w obrębie budynku,</li>
+        <li>dostępu do zasilania wodą bieżącą,</li>
+        <li>dostępu do zasilania prądem (230V),</li>
+        <li>dostępu do odpływu kanalizacyjnego w celu zrzutu zebranych zanieczyszczeń,</li>
+        <li>mile widziane zaufanie i cierpliwość Zlecającego.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2 class="section-title text-md-right">Czas oczekiwania na realizację</h2>
+    <div class="page-description">
+      <p class="lead">Zlecenia staramy się wykonywać bezzwłocznie.
+      Usługa czyszczenia i neutralizacji, realizowana jest w czasie od 2 do 3 dni od momentu zaakceptowania warunków przez Klienta.</p>
+    </div>
+  </section>
+
+  <section class="container pb-3">
+    <h2 class="section-title">Czas trwania prac</h2>
+    <div class="page-description">
+      <p class="lead">O czasie, jaki niezbędny jest do wykonania usługi, decyduje wiele czynników. Rodzaj i wielkość powierzchni, skala i rodzaj zabrudzeń zapachowych to główne z nich. Realizacja zadania czyszczenia oraz neutralizacji odorów, najczęściej zamyka się w ciągu jednego dnia roboczego, 2 – 4 godzin pracy.</p>
+    </div>
+  </section>
+
+  <div class="container pb-5 text-right">
+    <hr>
+    <div class="row">
+      <div class="col-md-6 pt-4 text-md-left">
+        <span class="btn-wrapper px-2 mb-3">
+          <button onclick="location.href='{{ url_for('galeria') }}'" class="btn btn-outline-info  nav-btn" type="button">
+            Zobacz galerię
+          </button>
+        </span>
+      </div>
+      <div class="col-md-6 pt-4 text-md-right">
+        <span class="btn-wrapper px-2 mb-3">
+          <button onclick="location.href='{{ url_for('uslugi_dom')}}'" class="btn btn-outline-info  nav-btn" type="button">
+            Powrót do Usług dla Domu
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock content %}

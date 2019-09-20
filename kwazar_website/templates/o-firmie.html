@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+{% block content %}
+<header>
+  <section class="container">
+    <h1 class="page-title">O Firmie</h1>
+    <div class="page-description">
+      <p class="lead">Serdecznie witamy na stronie poświęconej profesjonalnemu czyszczeniu.<br>
+      Witryna ta ma za zadanie przybliżyć Państwu naszą Firmę, jak również zapoznać Państwa z przykładowymi możliwościami wykorzystania naszego doświadczenia. Zbiór <a href="{{ url_for('uslugi') }}">usług</a> z branży utrzymania czystości, z natury rzeczy, nie jest zbiorem zamkniętym, dlatego w treści nie koncentrujemy się na wskazaniu wszystkich możliwych prac. Warto więc pamiętać, że Państwa kłopot, w prosty sposób, można skonsultować <a href="{{ url_for('kontakt') }}">pisząc lub dzwoniąc do nas</a>.</p>
+    </div>
+  </section>
+</header>
+<main>
+  <div class="container img-container">
+    <div class="row">
+      <div class="col-md-6 pb-3">
+        <img class="img-fluid" src="../../static/img/uslugi/firma/mycie_elewacji_3.jpg" alt="Firma czyszcząca z Bydgoszczy - czyszczenie elewacji" />
+      </div>
+      <div class="col-md-6">
+        <img class="img-fluid" src="../../static/img/uslugi/firma/czyszczenie_posadzki_hali_magazynowej_7a.jpg" alt="Wymiana tarczy szorowarki" />
+      </div>
+    </div>
+  </div>
+
+  <section class="container">
+    <h2 class="section-title text-md-right">O nas</h2>
+    <div class="page-description">
+      <p class="lead">Firma Profesjonalne Czyszczenie „Kwazar” jest firmą rodzinną, działającą na rynku od 2007r. Jesteśmy płatnikami podatku VAT. Korzystając z coraz większego zapotrzebowania na rynku, od szeregu lat rozwijamy siebie jak i nasze zaplecze techniczne.
+      Dzięki charakterowi firmy mikro, systematycznie podwyższamy poziom świadczonych prac. Cechuje nas elastyczność, uczciwość i miła obsługa.<br>Nasze propozycje kierujemy na dwa zdefiniowane obszary, tj. <a href="{{ url_for('uslugi_dom') }}">„Dla Domu”</a> oraz <a href="{{ url_for('uslugi_firma') }}">„Dla Firm”</a>.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2 class="section-title">Dlaczego my?</h2>
+    <div class="page-description">
+      <p class="lead">Jeśli rozważają Państwo wybór właściwej firmy czyszczącej, pragniemy zapewnić o tym, że nie zawiodą się Państwo stawiając właśnie na nas. Nasze potknięcia w ciągu minionych kilkunastu lat działalności można policzyć na palcach jednej ręki. Jasnym jest, że nie popełnia błędów tylko ten, kto nic nie robi. Mimo tysięcy wykonanych zleceń, pozostajemy w przyjaznych kontaktach z naszymi Klientami.<br><br>
+
+      Stale pozyskujemy “Usługobiorców z Polecenia”, którzy korzystając z doświadczenia swoich znajomych, krewnych, partnerów biznesowych, mają pewność że zlecona nam usługa zostanie właściwie wykonana.<br><br>
+
+      Oto kilka powodów, dlaczego grono naszych klientów stale rośnie:</p>
+      <ul class="lead">
+        <li>sympatyczna, cierpliwa obsługa, bezpłatne doradztwo</li>
+        <li>gotowość pomocy Klientowi w sytuacjach pilnych, <a href="{{ url_for('uslugi_ekspres') }}">działania ekspresowe</a></li>
+        <li>kultura osobista i uśmiech w kontakcie z Klientem</li>
+        <li><a href="{{ url_for('cennik') }}">konkurencyjne ceny</a> realizacji zleceń</li>
+        <li>szeroki asortyment <a href="{{ url_for('uslugi') }}">usług</a></li>
+        <li>elastyczne, efektywne sposoby komunikacji i realizacji usługi</li>
+        <li>terminowość, punktualność, rzetelność, uczciwość</li>
+        <li><a href="{{ url_for('galeria_referencje_certyfikaty') }}">certyfikowana wiedza teoretyczna</a> oraz praktyczna z zakresu utrzymania czystości</li>
+        <li>sprawdzone, skuteczne i bezpieczne środki czyszczące, preparaty impregnujące (wszystkie posiadają atesty PZH i spełniają normy sanitarno-epidemiologiczne)</li>
+        <li>nowoczesny park maszyn, urządzeń, akcesoriów</li>
+        <li>dogodne terminy i formy płatności</li>
+        <li>gwarancja na wykonaną usługę, dbałość o mienie Zlecającego</li>
+        <li>polisa ubezpieczeniowa OC na wykonywane usługi</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="container img-container">
+    <div class="row">
+      <div class="col-md-6 pt-3">
+        <img class="img-fluid" src="../../static/img/uslugi/firma/czyszczenie_posadzki_hali_magazynowej_9a.jpg" alt="Czyszczenie posadzek urządzeniem Kärcher" />
+      </div>
+      <div class="col-md-6 pt-3">
+        <img class="img-fluid" src="../../static/img/uslugi/dom/czyszczenie_kostki_brukowej_2.jpg" alt="Mycie kostki brukowej w okolicach Bydgoszczy" />
+      </div>
+    </div>
+  </div>
+
+
+  <section class="container py-4">
+    <h2 class="section-title text-md-right">Zaufali nam</h2>
+    <div class="page-description">
+      <p class="lead">Dotychczas zaufało nam bardzo wielu Klientów Indywidualnych, zamawiających usługi czyszczenia, sprzątania i konserwacji różnorodnych powierzchni w domu lub mieszkaniu. Cieszymy się także zaufaniem marek rozpoznawalnych na rynku, takich jak: Hotel „Pod Orłem” Bydgoszcz, Spółka „Polski Cukier S.A.” Kruszwica, Firma Kurierska „DHL” oddział w Solcu Kujawskim, Hotel „Saga” Zamość, „Genderka” sp. z o.o. Bydgoszcz, Pralnia „Ekopral” Bydgoszcz, „Belma” S.A. Lisi Ogon, Centrum Szkolenia Sił Połączonych „NATO” Bydgoszcz, „KSBRUK” Rozgarty, Firma „Meblomax” Bydgoszcz… i wielu innych.<br><br>
+      </p>
+      <p class="lead font-weight-bold text-center">Wszystkim dotychczasowym jak i przyszłym Zleceniodawcom pragniemy podziękować<br>za okazane zaufanie oraz wybór właśnie naszej Firmy.</p>
+    </div>
+  </section>
+</main>
+
+{% endblock content %}

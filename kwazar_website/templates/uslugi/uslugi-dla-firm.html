@@ -1,0 +1,205 @@
+{% extends "layout.html" %}
+{% block content %}
+<header class="container">
+  <h1 class="page-title">Usługi dla Firm</h1>
+  <div class="page-description">
+    <p class="lead">Organizacjom, podmiotom prawnym i urzędom oferujemy <a href="{{ url_for('galeria_referencje_certyfikaty') }}">zdobyte przez szereg lat doświadczenie</a> w branży utrzymania czystości. Skutecznie realizujemy zadania związane z przekazaniem nieruchomości do użytkowania oraz prac specjalistycznych w bieżącej obsłudze obiektów. Zdobyliśmy zaufanie <a href="{{ url_for('o_firmie') }}">wielu Klientów</a> z którymi pogłębiamy i wciąż doskonalimy współpracę.<br><br>
+
+      Gwarantujemy szybkie terminy realizacji oraz profesjonalne doradztwo w zakresie czyszczenia oraz konserwacji powierzchni. Usługi wykonujemy z użyciem maszyn i urządzeń linii profesjonalnej wiodących marek, ograniczając czas wykonania prac, jak i wydatnie podwyższając jakość oraz bezpieczeństwo realizacji. W powierzonych nam zleceniach wykorzystujemy wieloletnią współpracę z producentami oraz dystrybutorami chemii zadaniowej, profesjonalnej, korzystając z bieżących innowacji w tym zakresie.
+    </p>
+  </div>
+</header>
+<main>
+  <div class="container py-3">
+    <div class="collapse" id="readMore">
+      <div class="page-description">
+        <p class="lead">Gwarancją bezpieczeństwa wykonania jest nasze wieloletnie doświadczenie, <a href="{{ url_for('galeria_referencje_certyfikaty') }}">wiedza zdobyta w trakcie realizacji oraz szkoleń i certyfikowania</a>. Wszelkie prace przez nas wykonywane objęte są ubezpieczeniem OC w zakresie działalności.<br><br>
+
+          Rozsądne procedowanie zleceń najczęściej poprzedzone jest próbami na obiekcie. W połączeniu z rzetelnym wykonanie usługi zapewnia maksymalne ograniczenie uciążliwości prac przy zachowaniu wysokiej efektywności i jakości.<br>
+          <a href="{{ url_for('kontakt') }}">Zapraszamy do rozmów o konkretach.</a>
+        </p>
+      </div>
+      <section>
+        <h2 class="section-title text-md-right">Jak działamy?</h2>
+        <div class="container">
+          <div class="row tiles">
+            <div class="col-lg-4 col-md-6 tiles-item">
+              <div class="tiles-icon">
+                <span class="icon-mail2"></span>
+              </div>
+              <div class="h2 font-weight-bold">1. Kontakt</div>
+              <p>Zlecający wysyła na nasz e-mail opracowane zapytanie ofertowe lub kontaktuje się telefonicznie.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 tiles-item">
+              <div class="tiles-icon">
+                <span class="icon-search"></span>
+              </div>
+              <div class="h2 font-weight-bold">2. Zebranie informacji</div>
+              <p>Analizujemy materiały i informacje przekazane przez Zlecającego, przeprowadzamy próby chemiczne, pomiary, szczegółowe rozmowy na obiekcie, opracowujemy zlecenie</p>
+            </div>
+            <div class="col-lg-4 col-md-6 tiles-item">
+              <div class="tiles-icon">
+                <span class="icon-file-text2"></span>
+              </div>
+              <div class="h2 font-weight-bold">3. Oferta</div>
+              <p>Przekazujemy Klientowi opracowaną ofertę kosztorysową wraz z uwzględnieniem technologii, techniki, terminów oraz polisy ubezpieczeniowej na prace.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 tiles-item">
+              <div class="tiles-icon">
+                <span class="icon-bubbles"></span>
+              </div>
+              <div class="h2 font-weight-bold">4. Modyfikacje</div>
+              <p>Wspólnie ze Zlecającym ustalamy optymalne warunków i terminy.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 tiles-item">
+              <div class="tiles-icon">
+                <span class="icon-truck"></span>
+              </div>
+              <div class="h2 font-weight-bold">5. Realizacja</div>
+              <p>Wykonujemy prace w oparciu o wcześniejsze ustalenia.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 tiles-item">
+              <div class="tiles-icon">
+                <span class="icon-checkmark"></span>
+              </div>
+              <div class="h2 font-weight-bold">6. Odbiór prac</div>
+              <p>Klient weryfikuje zakres, jakość i terminowość wykonania zadań. Następuje rozliczenie dokumentacji.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="btn-wrapper pt-3">
+      <button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#readMore" aria-expanded="false" aria-controls="readMore" onclick="toggleText(this);">
+       Rozwiń
+     </button>
+   </div>
+   <hr>
+ </div>
+ <section>
+    <div class="container py-3">
+      <div class="row">
+        <div class="col-md-6">
+          <a href="{{ url_for('uslugi_ekspres') }}" class="tile-uslugi ekspres">
+            <div class="jumbotron">
+              <h3 class="display-5">Usługi Ekspres</h3>
+              <hr class="my-4">
+              <p class="lead">Działania z pominięciem kolejki prac mające na celu ograniczenie skutków awarii</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="{{ url_for('firma_dachy') }}" class="tile-uslugi">
+            <div class="jumbotron">
+              <h3 class="display-5">Czyszczenie dachów</h3>
+              <hr class="my-4">
+              <p class="lead">Czyszczenie, konserwacja i malowanie dachów</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <a href="{{ url_for('firma_kostka') }}" class="tile-uslugi">
+            <div class="jumbotron">
+              <h3 class="display-5">Czyszczenie kostki brukowej</h3>
+              <hr class="my-4">
+              <p class="lead">Czyszczenie, impregnacja i malowanie kostki brukowej</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="{{ url_for('firma_podlogi') }}" class="tile-uslugi">
+            <div class="jumbotron">
+              <h3 class="display-5">Mycie posadzek</h3>
+              <hr class="my-4">
+              <p class="lead">Czyszczenie, konserwacja podłóg i posadzek</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <a href="{{ url_for('firma_elewacje') }}" class="tile-uslugi">
+            <div class="jumbotron">
+              <h3 class="display-5">Czyszczenie elewacji</h3>
+              <hr class="my-4">
+              <p class="lead">Czyszczenie, konserwacja elewacji i fasad</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="{{ url_for('firma_szklo') }}" class="tile-uslugi">
+            <div class="jumbotron">
+              <h3 class="display-5">Czyszczenie powierzchni szklanych</h3>
+              <hr class="my-4">
+              <p class="lead">Czyszczenie, mycie powierzchni szklanych, paneli fotowoltaicznych</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <a href="{{ url_for('firma_dywany') }}" class="tile-uslugi">
+            <div class="jumbotron">
+              <h3 class="display-5">Pranie wykładzin</h3>
+              <hr class="my-4">
+              <p class="lead">Pranie, impregnacja dywanów i wykładzin</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="{{ url_for('firma_meble') }}" class="tile-uslugi">
+            <div class="jumbotron">
+              <h3 class="display-5">Czyszczenie tapicerki</h3>
+              <hr class="my-4">
+              <p class="lead">Czyszczenie mebli, pranie i impregnacja tapicerki meblowej</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <a href="{{ url_for('firma_meble_skorzane') }}" class="tile-uslugi">
+            <div class="jumbotron">
+              <h3 class="display-5">Czyszczenie mebli skórzanych</h3>
+              <hr class="my-4">
+              <p class="lead">Czyszczenie i konserwacja tapicerki skórzanej</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="{{ url_for('firma_odory') }}" class="tile-uslugi">
+            <div class="jumbotron">
+              <h3 class="display-5">Ozonowanie</h3>
+              <hr class="my-4">
+              <p class="lead">Usuwanie niechcianych zapachów z materiałów tekstylnych i pomieszczeń, ozonowanie</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <a href="{{ url_for('firma_hale') }}" class="tile-uslugi">
+            <div class="jumbotron">
+              <h3 class="display-5">Czyszczenie hal produkcyjnych</h3>
+              <hr class="my-4">
+              <p class="lead">Czyszczenie i zabezpieczanie elewacji, ścian, dachów oraz posadzek hal i magazynów</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="{{ url_for('firma_gres') }}" class="tile-uslugi">
+            <div class="jumbotron">
+              <h3 class="display-5">Czyszczenie gresu</h3>
+              <hr class="my-4">
+              <p class="lead">Czyszczenie, konserwacja i impregnacja posadzek gresowych</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock content %}

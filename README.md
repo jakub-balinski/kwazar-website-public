@@ -5,11 +5,12 @@ Live version available [at this web adress](https://czyszczenie.bydgoszcz.pl)
 
 ## requirements
 - python 3.6+
-- pipenv
+- virtualenv
 
 ## usage
 the easiest way to run the website locally is to:
-- create local environment by `pipenv shell` in main folder
+- create local environment by `python -m virtualenv .` in main folder
+- activate local environment `source ./bin/activate`
 - in your local environment use `pip install -r requirements.txt`
 - run `python build.py` to create database (you can check and edit credentials to administrator's panel in `build.py`)
 - (also it may be neccessary to set values in `config.json` but it's very unlikely)

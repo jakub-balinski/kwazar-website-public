@@ -17,4 +17,5 @@ the easiest way to run the website locally is to:
 
 ## credits
 [@andreknieriem](https://github.com/andreknieriem/simplelightbox) for SimpleLightbox (used in gallery)
+
 [@amendoa](https://github.com/amendoa/fullPageScrollPureJS) for fullPageScrollPureJS (used on landing page)

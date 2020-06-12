@@ -1,5 +1,5 @@
 # kwazar-website-public
-Public version of commercial website made using Python and Flask
+Initial public version of commercial website made using Python and Flask (not updated here anymore)
 
 Live version available [at this web adress](https://czyszczenie.bydgoszcz.pl)
 
